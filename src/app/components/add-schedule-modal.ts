@@ -75,7 +75,7 @@ import { FormsModule } from "@angular/forms";
                     type="date"
                     [(ngModel)]="formData.date"
                     placeholder="Select Date"
-                    class="w-full h-[50px] px-5 pr-[58px] border-2 border-[#E9EBEC] rounded placeholder:text-[#C2C3CB] text-base focus:outline-none focus:border-[#009FD8] transition-colors"
+                    class="w-full h-[50px] px-5 border-2 border-[#E9EBEC] rounded placeholder:text-[#C2C3CB] text-base focus:outline-none focus:border-[#009FD8] transition-colors"
                   />
                 </div>
               </div>
@@ -93,7 +93,7 @@ import { FormsModule } from "@angular/forms";
                     type="time"
                     [(ngModel)]="formData.startTime"
                     placeholder="Select Time"
-                    class="w-full h-[50px] px-5 pr-[58px] border-2 border-[#E9EBEC] rounded placeholder:text-[#C2C3CB] text-base focus:outline-none focus:border-[#009FD8] transition-colors"
+                    class="w-full h-[50px] px-5 border-2 border-[#E9EBEC] rounded placeholder:text-[#C2C3CB] text-base focus:outline-none focus:border-[#009FD8] transition-colors"
                   />
                 </div>
               </div>
@@ -108,7 +108,7 @@ import { FormsModule } from "@angular/forms";
                     type="time"
                     [(ngModel)]="formData.endTime"
                     placeholder="Select Time"
-                    class="w-full h-[50px] px-5 pr-[58px] border-2 border-[#E9EBEC] rounded placeholder:text-[#C2C3CB] text-base focus:outline-none focus:border-[#009FD8] transition-colors"
+                    class="w-full h-[50px] px-5 border-2 border-[#E9EBEC] rounded placeholder:text-[#C2C3CB] text-base focus:outline-none focus:border-[#009FD8] transition-colors"
                   />
                 </div>
               </div>
