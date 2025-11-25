@@ -56,8 +56,10 @@ import { FormsModule } from "@angular/forms";
           </div>
         </div>
 
-        <!-- Modal Body - Scrollable -->
-        <form class="flex-1 overflow-y-auto px-[25px] py-6" (ngSubmit)="onSubmit()">
+        <!-- Modal Body and Form -->
+        <form class="flex-1 flex flex-col" (ngSubmit)="onSubmit()">
+          <!-- Scrollable Content -->
+          <div class="flex-1 overflow-y-auto px-[25px] py-6">
           <!-- Profile Upload -->
           <div class="flex justify-center mb-8">
             <div class="relative">
