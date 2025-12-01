@@ -335,6 +335,7 @@ export class AddInformationModalComponent {
     title: "",
     floorPlanFor: "",
     type: "",
+    url: "",
     description: "",
     profileImage: "",
     featuredImages: [] as string[],
