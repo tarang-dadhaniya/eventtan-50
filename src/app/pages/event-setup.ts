@@ -2329,6 +2329,7 @@ const EVENT_OVERVIEW_ICON = `<svg width="22" height="22" viewBox="0 0 22 22" fil
 
                           <!-- Add Speakers Button -->
                           <button
+                            (click)="openAddSpeakersModal()"
                             class="h-11 px-4 bg-[#049AD0] hover:bg-[#0385b5] rounded border border-[#049AD0] text-white font-semibold text-base flex items-center justify-center gap-2 transition-colors whitespace-nowrap"
                           >
                             <svg
