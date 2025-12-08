@@ -791,7 +791,10 @@ import { FormsModule } from "@angular/forms";
               >
                 <div class="flex flex-wrap gap-[15px]">
                   <div
-                    *ngFor="let docName of formData.documentNames; let i = index"
+                    *ngFor="
+                      let docName of formData.documentNames;
+                      let i = index
+                    "
                     class="relative w-[89px]"
                   >
                     <div class="flex flex-col items-center pt-[9px]">
