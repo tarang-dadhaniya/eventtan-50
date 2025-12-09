@@ -3969,16 +3969,31 @@ export class EventSetupComponent implements OnInit {
 
   openAddSocialMediaModal() {
     this.editModeSocialMedia = false;
+    this.editingSocialMedia = null;
+    this.isSocialMediaModalOpen = true;
+  }
+
+  editSocialMedia(socialMedia: SocialMediaEntry) {
+    this.editModeSocialMedia = true;
+    this.editingSocialMedia = socialMedia;
     this.isSocialMediaModalOpen = true;
   }
 
   closeSocialMediaModal() {
     this.isSocialMediaModalOpen = false;
     this.editModeSocialMedia = false;
+    this.editingSocialMedia = null;
   }
 
   onSocialMediaSave(socialMediaData: any) {
-    this.socialMediaService.addSocialMedia(this.eventId, socialMediaData);
+    if (this.editModeSocialMedia && this.editingSocialMedia) {
+      this.socialMediaService.updateSocialMedia(this.editingSocialMedia.id, {
+        type: socialMediaData.socialMedia.facebook ? 'Facebook' : (socialMediaData.socialMedia.blogRss ? 'Blog/Rss' : 'Twitter'),
+        url: socialMediaData.urls.facebook || socialMediaData.urls.blogRss || socialMediaData.urls.twitter || '',
+      });
+    } else {
+      this.socialMediaService.addSocialMedia(this.eventId, socialMediaData);
+    }
     this.loadSocialMedia();
     this.closeSocialMediaModal();
   }
